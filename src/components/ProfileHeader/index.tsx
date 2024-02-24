@@ -7,7 +7,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faUserGroup, faBuilding, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { Link } from '../Link'
 
-export function Header() {
+export function ProfileHeader() {
   return <Container>
     <img src={logo} alt='Logo Git Hub Blog' />
     <HeaderContent>

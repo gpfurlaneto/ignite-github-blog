@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { mixins } from "../../styles/mixins";
 
 export const Container = styled.header`
+
   position: relative;
   height: 296px;
   width: 100%;
@@ -12,6 +13,8 @@ export const Container = styled.header`
   flex-direction: column;
   align-items: center;
 
+  margin-bottom: 110px;
+  
   img {
     margin-top: 64px;
     width: 148px;

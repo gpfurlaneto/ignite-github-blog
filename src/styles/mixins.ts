@@ -23,12 +23,12 @@ export const mixins = {
     `,
 
     textS: css`
-      font-size: 0.875;
+      font-size: 0.875rem;
       line-height: 160%;
     `,
 
     link: css`
-      font-size: 0.75;
+      font-size: 0.75rem;
       line-height: 160%;
     `
   }
