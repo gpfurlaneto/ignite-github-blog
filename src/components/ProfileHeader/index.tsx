@@ -1,6 +1,5 @@
-import { Container, HGroup, HeaderContent, HeaderProfile, HeaderInfo } from './styles'
+import { HGroup, HeaderProfile, HeaderInfo, Container } from './styles'
 
-import logo from '../../assets/logo.svg'
 import avatar from '../../assets/avatar.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -8,9 +7,8 @@ import { faUserGroup, faBuilding, faArrowUpRightFromSquare } from '@fortawesome/
 import { Link } from '../Link'
 
 export function ProfileHeader() {
-  return <Container>
-    <img src={logo} alt='Logo Git Hub Blog' />
-    <HeaderContent>
+  return (
+    <Container>
       <img src={avatar} />
       <HeaderProfile>
         <HGroup>
@@ -27,6 +25,6 @@ export function ProfileHeader() {
           <span><FontAwesomeIcon width={18} height={18} icon={faBuilding} />32 seguidores</span>
         </HeaderInfo>
       </HeaderProfile>
-    </HeaderContent>
-  </Container >
+    </Container>
+  )
 }

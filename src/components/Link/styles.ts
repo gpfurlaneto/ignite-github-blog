@@ -4,7 +4,7 @@ import { mixins } from "../../styles/mixins";
 export const LinkComponent = styled.a`
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
 
   gap: 8px;

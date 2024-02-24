@@ -21,4 +21,8 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 160%;
     font: 400 1rem Nunito, sans-serif;
   }
+
+  main {
+    padding-bottom: 100px;
+  }
 }`
