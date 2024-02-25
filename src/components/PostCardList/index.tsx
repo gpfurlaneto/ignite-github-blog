@@ -1,13 +1,14 @@
+import { Issue } from "../../pages/Home";
 import { PostCard } from "../PostCard";
 import { Container } from "./styles";
 
-export function PostCardList() {
-  return <Container>
-    <PostCard />
-    <PostCard />
-    <PostCard />
-    <PostCard />
-    <PostCard />
-    <PostCard />
-  </Container>
+type PostCardListProps = {
+  issues: Issue[]
+}
+export function PostCardList({ issues }: PostCardListProps) {
+  return (
+    <Container>
+      {issues.map(issue => <PostCard key={issue.id} issue={issue} />)}
+    </Container>
+  )
 }

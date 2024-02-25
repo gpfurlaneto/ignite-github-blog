@@ -1,28 +1,32 @@
 import { HGroup, HeaderProfile, HeaderInfo, Container } from './styles'
 
-import avatar from '../../assets/avatar.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faUserGroup, faBuilding, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { Link } from '../Link'
+import { User } from '../../pages/Home'
 
-export function ProfileHeader() {
+type ProfileHeaderProps = {
+  user: User
+}
+
+export function ProfileHeader({ user }: ProfileHeaderProps) {
   return (
     <Container>
-      <img src={avatar} />
+      <img src={user.avatarUrl} />
       <HeaderProfile>
         <HGroup>
           <div>
-            <h1>Cameron Williamson</h1>
-            <Link href='#' sufixIcon={faArrowUpRightFromSquare}>github</Link>
+            <h1>{user.name}</h1>
+            <Link href={user.gitUrl} target='_blank' sufixIcon={faArrowUpRightFromSquare}>github</Link>
           </div>
-          <p>Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat pulvinar vel mass.</p>
+          <p>{user.bio}</p>
 
         </HGroup>
         <HeaderInfo>
-          <span><FontAwesomeIcon width={18} height={18} icon={faGithub} />cameronwll</span>
-          <span><FontAwesomeIcon width={18} height={18} icon={faUserGroup} />Rocketseat</span>
-          <span><FontAwesomeIcon width={18} height={18} icon={faBuilding} />32 seguidores</span>
+          <span><FontAwesomeIcon width={18} height={18} icon={faGithub} />{user.login}</span>
+          <span><FontAwesomeIcon width={18} height={18} icon={faUserGroup} />{user.company}</span>
+          <span><FontAwesomeIcon width={18} height={18} icon={faBuilding} />{user.followers} seguidores</span>
         </HeaderInfo>
       </HeaderProfile>
     </Container>

@@ -1,13 +1,20 @@
-import { Container, HeaderGroup } from "./styles";
+import { Issue } from "../../pages/Home";
+import { Container, HeaderGroup, Content } from "./styles";
+import removeMarkdown from "remove-markdown"
 
-export function PostCard() {
+type PostCardProps = {
+  issue: Issue
+}
+export function PostCard({ issue }: PostCardProps) {
+
+  const diff = new Date().getTime() - new Date(issue.createdAt).getTime();
+  const days = Math.round(diff / (1000 * 3600 * 24));
+
   return <Container href='#'>
     <HeaderGroup>
-      <h1>JavaScript data types and data structures</h1>
-      <span>Há 13 dia</span>
+      <h1>{issue.title}</h1>
+      <span>Há {days} dia{days > 1 ? 's' : ''}</span>
     </HeaderGroup>
-    <p>
-      Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript...
-    </p>
+    <Content>{removeMarkdown(issue.body)}</Content>
   </Container>
 }

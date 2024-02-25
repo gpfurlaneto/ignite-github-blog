@@ -13,7 +13,6 @@ export const Container = styled.header`
   }
 
   img {
-    all: unset;
     width: 148px;
     height: 148px;
     border-radius: 8px;

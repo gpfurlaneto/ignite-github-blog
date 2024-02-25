@@ -4,7 +4,7 @@ import logo from '../../assets/logo.svg'
 
 type LayoutProps = {
   header: ReactNode
-  children: ReactNode
+  children?: ReactNode
 }
 
 export function Layout({ header, children }: LayoutProps) {

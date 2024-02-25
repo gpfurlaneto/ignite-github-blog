@@ -8,9 +8,17 @@ export const Container = styled.div`
 
   padding-top: 72px;
   margin: auto;
+`
+
+export const FormItem = styled.div`
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 
   input {
-
+    width: 100%;
     border-radius: 6px;
     padding: 12px 16px;
     ${mixins.fonts.textM}
@@ -28,6 +36,22 @@ export const Container = styled.div`
     &:focus {
       border-color: ${props => props.theme.blue};
     }
+
+    &:disabled {
+      background-color: ${props => props.theme["base-border"]};
+    }
+  }
+
+  span {
+    margin-left: 4px;
+    color: red;
+    ${mixins.fonts.textM}
+  }
+
+  svg {
+    position: absolute;
+    top: 36px;
+    right: 10px;
   }
 `
 
