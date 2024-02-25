@@ -1,31 +1,23 @@
 import styled from "styled-components";
 import { mixins } from "../../styles/mixins";
 
-export const Container = styled.header`
-
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`
+export const LinksContainer = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 32px;
-  
-  @media (max-width: 900px) {
-    align-items: center;
-    flex-direction: column;
-  }
-
-  img {
-    all: unset;
-    width: 148px;
-    height: 148px;
-    border-radius: 8px;
-  }
-  
+  justify-content: space-between;
 `
-export const HeaderProfile = styled.div`
+
+export const HeaderTitle = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  gap: 20px
+  gap: 10px;
 `
 
 export const HGroup = styled.hgroup`
@@ -38,20 +30,6 @@ export const HGroup = styled.hgroup`
     ${mixins.fonts.titleL}
   }
 
-  p {
-    ${mixins.fonts.textM}
-  }
-
-  div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    /* @media (max-width: 900px) {
-      flex-direction: column;
-    } */
-  }
 `
 
 export const HeaderInfo = styled.div`

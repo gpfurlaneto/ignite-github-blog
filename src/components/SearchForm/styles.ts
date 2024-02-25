@@ -6,7 +6,6 @@ export const Container = styled.div`
   flex-direction:column;
   gap: 8px;
 
-  max-width: 864px;
   padding-top: 72px;
   margin: auto;
 

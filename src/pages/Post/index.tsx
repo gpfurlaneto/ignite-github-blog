@@ -1,7 +1,11 @@
+import { Layout } from "../../components/Layout";
+import { PostHeader } from "../../components/PostHeader/indext";
+import { Content } from "./styles";
+
 export function Post() {
   return (
-    <div>
-      Post
-    </div>
+    <Layout header={<PostHeader />}>
+      <Content>asd</Content>
+    </Layout>
   )
 }

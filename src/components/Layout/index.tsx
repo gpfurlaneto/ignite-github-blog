@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Container, HeaderContent, Logo } from "./styles";
+import { Content, Header, HeaderContainer, HeaderContent, Logo } from "./styles";
 import logo from '../../assets/logo.svg'
 
 type LayoutProps = {
@@ -9,12 +9,15 @@ type LayoutProps = {
 
 export function Layout({ header, children }: LayoutProps) {
   return (
-    <main>
-      <Container>
+    <>
+      <Header>
         <Logo src={logo} alt='Logo Git Hub Blog' />
-        <HeaderContent>{header}</HeaderContent>
-      </Container>
-      {children}
-    </main>
-  )
+        <HeaderContainer>
+          <HeaderContent>{header}</HeaderContent>
+        </HeaderContainer>
+      </Header>
+      <Content>
+        {children}
+      </Content>
+    </>)
 }
