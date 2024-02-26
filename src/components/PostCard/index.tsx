@@ -1,4 +1,4 @@
-import { Issue } from "../../pages/Home";
+import { Issue } from "../../contexts/GithubBlogContext";
 import { Container, HeaderGroup, Content } from "./styles";
 import removeMarkdown from "remove-markdown"
 
@@ -6,14 +6,10 @@ type PostCardProps = {
   issue: Issue
 }
 export function PostCard({ issue }: PostCardProps) {
-
-  const diff = new Date().getTime() - new Date(issue.createdAt).getTime();
-  const days = Math.round(diff / (1000 * 3600 * 24));
-
-  return <Container href='#'>
+  return <Container to={`/post/${issue.id}`}>
     <HeaderGroup>
       <h1>{issue.title}</h1>
-      <span>Há {days} dia{days > 1 ? 's' : ''}</span>
+      <span>Há {issue.age} dia{issue.age > 1 ? 's' : ''}</span>
     </HeaderGroup>
     <Content>{removeMarkdown(issue.body)}</Content>
   </Container>

@@ -1,4 +1,4 @@
-import { Issue } from "../../pages/Home";
+import { Issue } from "../../contexts/GithubBlogContext";
 import { PostCard } from "../PostCard";
 import { Container } from "./styles";
 

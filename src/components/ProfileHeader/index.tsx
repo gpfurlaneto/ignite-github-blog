@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faUserGroup, faBuilding, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { Link } from '../Link'
-import { User } from '../../pages/Home'
+import { User } from '../../contexts/GithubBlogContext'
 
 type ProfileHeaderProps = {
   user: User
@@ -18,7 +18,7 @@ export function ProfileHeader({ user }: ProfileHeaderProps) {
         <HGroup>
           <div>
             <h1>{user.name}</h1>
-            <Link href={user.gitUrl} target='_blank' sufixIcon={faArrowUpRightFromSquare}>github</Link>
+            <Link to={user.gitUrl} target='_blank' sufixIcon={faArrowUpRightFromSquare}>github</Link>
           </div>
           <p>{user.bio}</p>
 

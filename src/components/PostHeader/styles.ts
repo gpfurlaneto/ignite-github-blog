@@ -17,7 +17,7 @@ export const HeaderTitle = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  gap: 10px;
+  gap: 12px;
 `
 
 export const HGroup = styled.hgroup`

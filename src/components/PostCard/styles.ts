@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { mixins } from "../../styles/mixins";
+import { Link } from "react-router-dom";
 
-export const Container = styled.a`
+export const Container = styled(Link)`
   display: flex;
   flex-direction: column;
   gap: 22px;
